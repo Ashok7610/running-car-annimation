@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#main{
+    width:100%;
+    height: 100vh;
+    background: url('/sky.jpg');
+    background-size: center;
+    position: relative;
+    overflow: hidden;
+}
+#main .road{
+  width: 400vw;
+  height: 200px;
+  bottom: 0;
+  position: absolute;
+  background: url('/road.jpg');
+  animation: highway 5s linear infinite;
+}
+@keyframes highway{
+    0%{
+        transform: translateX(-200vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#main .city{
+    width: 500%;
+    height: 250px;
+    position: absolute;
+    bottom:200px;
+    background: url('/city.png');
+    
+    animation: home 20s linear infinite;
+}
+@keyframes home{
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+ #main .car{
+    width: 400px;
+    height: 100px;
+    background: url('/carbody.png');
+    top: 62%;
+    background-size: cover;
+    position: absolute;
+    right: 250px;
+ }
+ #main .car .tyr{
+    width: 50px;
+    height: 50px;
+    
+ }
+ #main .car .ahead{
+    margin: 58px 0 0 59px;
+    
+ }
+ #main .car .back{
+    margin:-50px 0 0 287px;
+   
+ }
+ #main .car .tyr img{
+    width: 100%;
+   animation: tyres 1s linear infinite;
+ }
+ @keyframes tyres {
+    100%{
+        transform: rotate(-360deg);
+    }
+ }
+</style>
+<body>
+    <div id="main">
+        <div class="city"></div>
+        <div class="road"></div>
+        <div class="car">
+            
+            <div class="tyr ahead"><img src="/tyres.png" alt=""></div>
+            <div class="tyr back"><img src="/tyres.png" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
